@@ -33,5 +33,4 @@ export class TimeSincePipe implements PipeTransform {
   }
   return value;
 }
-
 }
