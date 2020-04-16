@@ -1,4 +1,5 @@
 export class Repository {
+  
   constructor(
             public name: string,
             public description: string,
@@ -7,5 +8,4 @@ export class Repository {
             public forks:number,
             public watchers:number,
             public updated_at: Date) {}
-
 }
