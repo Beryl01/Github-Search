@@ -8,13 +8,12 @@ import { Repository } from '../repository';
   templateUrl: './my-profile.component.html',
   styleUrls: ['./my-profile.component.css']
 })
+
 export class MyProfileComponent implements OnInit {
  user:User;
  repos:any;
  searchedUser:string;
-
    constructor(private profileService:ProfileService){ }
-
   getByUser(username) {
       this.profileService.searchUsername(username).then(
      (success) => {
@@ -24,7 +23,6 @@ export class MyProfileComponent implements OnInit {
       console.log(error);
     }
       );
-
       this.profileService.getUserRepos(username).then(
      (success) => {
       this.repos = this.profileService.userRepo;
@@ -35,15 +33,11 @@ export class MyProfileComponent implements OnInit {
     }
       );
   }
-
   submitUser(){
     this.getByUser(this.searchedUser);
   }
-
   ngOnInit(): void {
 
      this.getByUser("Beryl01");
-
   }
-
 }
