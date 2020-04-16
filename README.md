@@ -7,7 +7,7 @@ Github-Search is a web application that can be used to search for the github pro
 
 ## Features
 1.A form that a user can input a username or repo name to search for it in github.
-2.A API that pulls data from github using a peronal access token.
+2.API that pulls data from github using a peronal access token.
 3.A display of time passed since a given repo was created.
 4.A highlight of the github username in blue.
 
@@ -21,7 +21,7 @@ Github-Search is a web application that can be used to search for the github pro
 
 
 ## Technologies Used
-Angular 8
+Angular CLI
 Typescript
 CSS
 HTML
