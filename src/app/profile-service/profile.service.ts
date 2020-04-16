@@ -12,11 +12,8 @@ export class ProfileService {
    userRepo:Repository;
    newRepo:any;
    private token = environment.token;
-
     constructor(private http:HttpClient) {
-
   }
-
   searchUsername(username:string) {
     interface ApiResponse {
        login: string,
@@ -28,9 +25,7 @@ export class ProfileService {
        following: number,
       public_repos: number,
        created_at: Date,
-
     }
-
      let promise = new Promise((resolve, reject) => {
       this.http.get<ApiResponse>(`https://api.github.com/users/${username}?access_token=${this.token}`)
       .toPromise().then(
@@ -45,7 +40,6 @@ export class ProfileService {
     });
      return promise
   }
-
   getUserRepos(username:string) {
       interface ApiResponse {
        name: string,
@@ -56,7 +50,6 @@ export class ProfileService {
        watchers:number
        updated_at: Date
       }
-
      let promise = new Promise((resolve, reject) => {
       this.http.get<ApiResponse>(`https://api.github.com/users/${username}/repos?access_token=${this.token}`)
       .toPromise().then(
@@ -71,7 +64,6 @@ export class ProfileService {
     });
      return promise
   }
-
   getRepoList(reponame:string) {
       interface ApiResponse {
        name: string,
@@ -82,7 +74,6 @@ export class ProfileService {
        watchers:number
        updated_at: Date
       }
-
      let promise = new Promise((resolve, reject) => {
       this.http.get<ApiResponse>(`https://api.github.com/search/repositories?q=${reponame}
       &per_page=1000 access_token=${this.token}`).toPromise().then(
@@ -97,7 +88,6 @@ export class ProfileService {
     });
      return promise
   }
-
 }
 
 
