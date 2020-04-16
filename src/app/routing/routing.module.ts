@@ -6,7 +6,7 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
 import { RepoSearchComponent } from '../repo-search/repo-search.component'
 
 const routes: Routes = [
-  { path: 'home', component: MyProfileComponent },
+  { path: 'user', component: MyProfileComponent },
   { path: 'repos', component: RepoSearchComponent },
   { path: '', redirectTo: "/home", pathMatch: "full" },
   { path: '**', component: NotFoundComponent },
