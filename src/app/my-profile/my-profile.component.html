@@ -2,74 +2,70 @@
 
   <form #searchUser="ngForm" (ngSubmit)="submitUser()">
     <div class="form-group" style="display: flex">
-      <input type="text" class="form-control" name = "username"[(ngModel)]="searchedUser" 
-      placeholder="Search github username" style ="border-color: #000" rows="10"required>
+      <input type="text" class="form-control" name="username" [(ngModel)]="searchedUser"
+        placeholder="Search github username" style="border-color: #000" rows="10" required>
     </div>
-     <button type="submit" class="btn btn-block">Search</button>
+    <button type="submit" class="btn btn-block">Search</button>
   </form>
 
-
-  <div class="card shadow-hover shadow profile" >
-  <div class="card-body ">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" />
+  <div class="card shadow-hover shadow profile">
+    <div class="card-body ">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" />
+        </div>
+        <div class="col-md-8">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Username:</strong><span appHighlight>{{ user.login }}</span>
+            </li>
+            <li class="list-group-item">
+              <strong>Name:</strong>{{ user.name }}
+            </li>
+            <li class="list-group-item">
+              <strong>Location:</strong>{{ user.location }}
+            </li>
+            <li class="list-group-item">
+              <strong>Member Since: </strong>{{ user.created_at|date }}
+            </li>
+            <li class="list-group-item">
+              <strong>Followers: </strong>{{ user.followers }}
+            </li>
+            <li class="list-group-item">
+              <strong>Following: </strong>{{ user.following }}
+            </li>
+            <li class="list-group-item">
+              <strong>Public Repos: </strong>{{ user.public_repos }}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-8">
+      <br />
+      <a href="{{ user.html_url }}" class="btn btn-primary">View On Github</a>
+    </div>
+  </div>
 
-        <ul class="list-group">
-          <li class="list-group-item">
-            <strong >Username:</strong><span appHighlight>{{ user.login }}</span>
-          </li>
-          <li class="list-group-item">
-            <strong>Name:</strong>{{ user.name }}
-          </li>
-          <li class="list-group-item">
-            <strong>Location:</strong>{{ user.location }}
-          </li>
-          <li class="list-group-item">
-            <strong>Member Since: </strong>{{ user.created_at|date }}
-          </li>
-          <li class="list-group-item">
-            <strong>Followers: </strong>{{ user.followers }}
-          </li>
-          <li class="list-group-item">
-            <strong>Following: </strong>{{ user.following }}
-          </li>
-          <li class="list-group-item">
-             <strong>Public Repos: </strong>{{ user.public_repos }}
-           </li>
-        </ul>
+  <h3>REPOSITORIES</h3>
+  <div class="row">
+    <div class=" card-columns">
+      <div *ngFor="let repo of repos">
+        <div class="card m-4 ">
+          <div class=" text-center card-header">
+            <h4>{{repo.name}}</h4>
+          </div>
+          <div class="card-body ">
+            <p><b>Language:</b> {{repo.language}}</p>
+            <p>{{repo.description}}</p>
+            <p><b>Created on:</b> {{repo.created_at | date}}</p>
+          </div>
+          <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
+            class="m-3 btn btn-outline-info card-footer">View this project on github</a>
+          <div class="card-footer">
+            <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}</p>
+            <p><b>Last updated:</b> {{repo.updated_at|timeSince}}</p>
+          </div>
+        </div>
       </div>
     </div>
-    <br />
-    <a href="{{ user.html_url }}" class="btn btn-primary">View On Github</a>
-  </div>
-</div>
-
-<h3>REPOSITORIES</h3>
-
-  <div class="row">
-     <div class=" card-columns">
-         <div *ngFor="let repo of repos">
-             <div class="card m-4 ">
-                 <div class=" text-center card-header">
-                     <h4>{{repo.name}}</h4>
-                 </div>
-
-                 <div class="card-body ">
-                   <p><b>Language:</b> {{repo.language}}</p>
-                     <p>{{repo.description}}</p>
-                     <p><b>Created on:</b> {{repo.created_at | date}}</p>
-                 </div>
-                 <a href="{{repo.html_url}}" class="text-align-center" target="_blank" 
-                 class="m-3 btn btn-outline-info card-footer">View this project on github</a>
-                     <div class="card-footer">
-                       <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}</p>
-                       <p><b>Last updated:</b> {{repo.updated_at|timeSince}}</p>
-                   </div>
-             </div>
-         </div>
-     </div>
   </div>
 </div>
