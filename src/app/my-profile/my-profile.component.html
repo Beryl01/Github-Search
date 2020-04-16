@@ -9,7 +9,7 @@
   </form>
 
   <div class="card shadow-hover shadow profile">
-    <div class="card-body ">
+    <div class="card-body">
       <div class="row">
         <div class="col-md-4">
           <img src="{{ user.avatar_url }}" class="img-fluid" alt="me" />
@@ -26,7 +26,7 @@
               <strong>Location:</strong>{{ user.location }}
             </li>
             <li class="list-group-item">
-              <strong>Member Since: </strong>{{ user.created_at|date }}
+              <strong>Github user since: </strong>{{ user.created_at|date }}
             </li>
             <li class="list-group-item">
               <strong>Followers: </strong>{{ user.followers }}
@@ -49,19 +49,19 @@
   <div class="row">
     <div class=" card-columns">
       <div *ngFor="let repo of repos">
-        <div class="card m-3 ">
+        <div class="card md-4 bg-transparent text-dark">
           <div class=" text-center card-header">
             <h4>{{repo.name}}</h4>
           </div>
-          <div class="card-body ">
-            <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b>
-              {{repo.language}}</p>
+          <div class="card-body">
             <p>{{repo.description}}</p>
             <p><b>Created on:</b> {{repo.created_at | date}}</p>
             <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
-              class="m-3 btn btn-outline-info card-footer">View repository on Github</a>
+              class="btn btn-outline-info card-footer">View repository on Github</a>
           </div>
           <div class="card-footer">
+            <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b>
+              {{repo.language}}</p>
             <p><b>Followers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}
               <b>Updated:</b> {{repo.updated_at|timeSince}}</p>
           </div>
