@@ -24,6 +24,7 @@ body {
 .btn:hover{
   background-color: blue;
 }
+
 .repo-language-color{
   position: relative;
   top: 1px;
@@ -32,3 +33,7 @@ body {
   height: 12px;
   border-radius: 50%;
 }
+
+.card{
+  background-color: rgb(237, 237, 245); 
+  }
