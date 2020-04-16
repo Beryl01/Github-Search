@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya');
 
 body {
-  background: linear-gradient(90deg, rgb(181,181,191) 60%,rgba(181,181,191,1) 2%, rgba(165,214,208,1) 100%, 
-  rgba(173,221,219,0.7231267507002801) 100%);
+  background: linear-gradient(90deg, rgb(181,181,191) 40%,rgba(181,181,191,1) 12%, rgba(165,214,208,1) 80%, 
+  rgba(173,221,219,0.7231267507002801) 90%);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;
@@ -23,4 +23,12 @@ body {
 }
 .btn:hover{
   background-color: blue;
+}
+.repo-language-color{
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }

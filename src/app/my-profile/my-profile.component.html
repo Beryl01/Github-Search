@@ -49,20 +49,19 @@
   <div class="row">
     <div class=" card-columns">
       <div *ngFor="let repo of repos">
-        <div class="card m-4 ">
+        <div class="card m-3 ">
           <div class=" text-center card-header">
             <h4>{{repo.name}}</h4>
           </div>
           <div class="card-body ">
-            <p><b>Language:</b> {{repo.language}}</p>
+            <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b> {{repo.language}}</p>
             <p>{{repo.description}}</p>
             <p><b>Created on:</b> {{repo.created_at | date}}</p>
+            <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
+            class="m-3 btn btn-outline-info card-footer">View repository on github</a>
           </div>
-          <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
-            class="m-3 btn btn-outline-info card-footer">View this project on github</a>
           <div class="card-footer">
-            <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}</p>
-            <p><b>Last updated:</b> {{repo.updated_at|timeSince}}</p>
+            <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}} <b>Last update:</b> {{repo.updated_at|timeSince}}</p>
           </div>
         </div>
       </div>
