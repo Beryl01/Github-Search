@@ -21,7 +21,7 @@
             <p><b>Created on:</b> {{repo.created_at | date}}</p>
           </div>
           <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
-            class="m-3 btn btn-block card-footer">View this project on github</a>
+            class="m-3 btn btn-outline-info card-footer">View this project on github</a>
           <div class="card-footer">
             <p><b>Watchers:</b> {{repo.watchers}} Forks: {{repo.forks}}</p>
             <p><b>Last updated:</b> {{repo.updated_at|timeSince}}</p>
