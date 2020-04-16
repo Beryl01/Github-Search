@@ -11,10 +11,7 @@ import { Repository } from '../repository';
 export class RepoSearchComponent implements OnInit {
   repos:any;
   searchedRepo:string;
-
   constructor(private profileService:ProfileService){ }
-
-
   getByRepo(reponame) {
     this.profileService.getRepoList(reponame).then(
    (success) => {
@@ -26,12 +23,9 @@ export class RepoSearchComponent implements OnInit {
   }
     );
   }
-
   submitRepo(){
     this.getByRepo(this.searchedRepo);
   }
   ngOnInit(): void {
-
   }
-
 }
