@@ -6,10 +6,10 @@ import { MyProfileComponent } from '../my-profile/my-profile.component';
 import { RepoSearchComponent } from '../repo-search/repo-search.component'
 
 const routes: Routes = [
-{ path: 'home', component: MyProfileComponent},
-{ path: 'repos', component: RepoSearchComponent},
-{ path: '', redirectTo:"/home", pathMatch:"full"},
-{ path:'**', component:NotFoundComponent},
+  { path: 'home', component: MyProfileComponent },
+  { path: 'repos', component: RepoSearchComponent },
+  { path: '', redirectTo: "/home", pathMatch: "full" },
+  { path: '**', component: NotFoundComponent },
 ]
 
 @NgModule({
@@ -17,7 +17,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports:[RouterModule],
+  exports: [RouterModule],
   declarations: []
 })
 export class RoutingModule { }

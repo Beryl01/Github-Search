@@ -54,14 +54,16 @@
             <h4>{{repo.name}}</h4>
           </div>
           <div class="card-body ">
-            <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b> {{repo.language}}</p>
+            <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b>
+              {{repo.language}}</p>
             <p>{{repo.description}}</p>
             <p><b>Created on:</b> {{repo.created_at | date}}</p>
             <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
-            class="m-3 btn btn-outline-info card-footer">View repository on github</a>
+              class="m-3 btn btn-outline-info card-footer">View repository on Github</a>
           </div>
           <div class="card-footer">
-            <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}} <b>Last update:</b> {{repo.updated_at|timeSince}}</p>
+            <p><b>Watchers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}
+              <b>Last update:</b> {{repo.updated_at|timeSince}}</p>
           </div>
         </div>
       </div>
