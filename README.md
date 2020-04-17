@@ -1,34 +1,45 @@
-# Github-Search
-#### Version 1.0
-#### By Beryl Negesa
+# Author
 
-## Description
-Github-Search is a web application that can be used to search for the github profile of a github user, diplaying the user's details as well as the repos they have in github.
+Beryl Negesa Otieno
 
-## Features
-1.A form that a user can input a username or repo name to search for it in github.
-2.API that pulls data from github using a peronal access token.
-3.A display of time passed since a given repo was created.
-4.A highlight of the github username in blue.
+# Description
 
-## Setup/Installation Requirements
-1.Clone the repo or download a ZIP file of the code.
-2.The repository, if downloaded as a .zip file will need to be extracted to your preferred location and opened.
-3.Ensure you have installed nodeJs as well as Angular CLI.
-4.Navigate to the project in your terminal and run it with the $ng serve command.
+website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 
-## Link to web page.
+# Ip
 
+This project was generated with [Angular CLI]
+(https://github.com/angular/angular-cli) version 9.0.7.
+Github link-https://beryl01.github.io/Github-Search/
 
-## Technologies Used
-Angular CLI
-Typescript
-CSS
-HTML
-Bootstrap
+## Development server
 
-## Support and contact details
-In case of any questions, feel free to contact me at my email address: berylnegesa@gmail.com
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Otherwise check link deployed page: 
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma]
+(https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor]
+(http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README]
+(https://github.com/angular/angular-cli/blob/master/README.md).
+
 
 ### License
 MIT licence:Permission granted to obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
