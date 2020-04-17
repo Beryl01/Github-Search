@@ -7,3 +7,24 @@
 .form-group{
   color:blue;
 }
+
+.card{
+  background-color: rgb(237, 237, 245); 
+  }
+  
+.placeholder{
+  color: blue;
+  }
+
+  h1,
+  h2{
+    color:white;
+    text-align: center;
+  }
+  
+  h3,
+  h4{
+    text-align: center;
+    font-family: Helvetica;
+    color: blue;
+  }  
