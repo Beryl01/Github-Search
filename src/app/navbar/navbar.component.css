@@ -1,8 +1,9 @@
 .navbar{
   margin-bottom: 20px;
   background-color: #24292e;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.5;
+  height: 80px;
 }
 
 #pull{
@@ -16,5 +17,12 @@
 
 #market{
   margin-right: 30px;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  height: 30px;
+  margin-bottom: 0px;
 }
 

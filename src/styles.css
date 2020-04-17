@@ -34,6 +34,12 @@ body {
   border-radius: 50%;
 }
 
-.card{
+.card-body{
   background-color: rgb(237, 237, 245); 
   }
+
+.card{
+  border-radius: 30px;
+}  
+
+  

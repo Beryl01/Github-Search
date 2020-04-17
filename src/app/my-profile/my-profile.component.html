@@ -8,7 +8,7 @@
     <button type="submit" class="btn btn-block">Search</button>
   </form>
 
-  <div class="card shadow-hover shadow profile">
+  <div class="container card shadow-hover shadow profile">
     <div class="card-body">
       <div class="row">
         <div class="col-md-4">
@@ -45,9 +45,9 @@
     </div>
   </div>
 
-  <h3>REPOSITORIES</h3>
-  <div class="row">
-    <div class=" card-columns">
+  <h2>YOUR REPOSITORIES</h2>
+  <div class="container row">
+    <div class=" card-columns text-dark">
       <div *ngFor="let repo of repos">
         <div class="card m-4  text-dark">
           <div class=" text-center card-header">
@@ -55,13 +55,13 @@
           </div>
           <div class="card-body">
             <p>{{repo.description}}</p>
-            <p><b>Created on:</b> {{repo.created_at | date}}</p>
             <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
               class="btn btn-outline-info card-footer">View repository on Github</a>
           </div>
           <div class="card-footer">
             <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b>
               {{repo.language}}</p>
+            <p><b>Created on:</b> {{repo.created_at | date}}</p>
             <p><b>Followers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}
               <b>Updated:</b> {{repo.updated_at|timeSince}}</p>
           </div>
@@ -69,4 +69,21 @@
       </div>
     </div>
   </div>
+  <!-- <div *ngFor="let repo of repos">
+  <div id="user-repository list">
+    <ul>
+      <li class='col-12 d-flex width-full'>
+        <h4>{{repo.name}}</h4>
+        <p>{{repo.description}}</p>
+        <p><b>Created on:</b> {{repo.created_at | date}}</p>
+        <p><span class="repo-language-color" style="background-color: #2b7489"></span><b>ProgrammingLanguage:</b>
+          {{repo.language}}</p>
+        <p><b>Followers:</b> {{repo.watchers}} <b>Forks:</b> {{repo.forks}}
+          <b>Updated:</b> {{repo.updated_at|timeSince}}</p>
+          <a href="{{repo.html_url}}" class="text-align-center" target="_blank"
+          class="btn btn-outline-info card-footer">View repository on Github</a>
+      </li>
+    </ul>
+  </div>
+  </div> -->
 </div>
